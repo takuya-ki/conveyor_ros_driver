@@ -3,6 +3,7 @@
 ROS driver for conveyor belt.
 
 ## Start this driver
+    $ roscore  
     $ rosrun conveyor conveyor_driver.py  
 
 ## Send a predefined command  
