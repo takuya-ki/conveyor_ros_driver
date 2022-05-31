@@ -10,7 +10,6 @@ class ConveyorNode:
     """Class to handle setting commands."""
     def __init__(self, ip, sockport):
         self._dmhctr = DMHCommander(ip, sockport)
-        rospy.loginfo(self._dmhctr)
         rospy.sleep(1)
         self.set_command_srv = rospy.Service(
             "/conveyor/set_command",
@@ -33,7 +32,5 @@ if __name__ == '__main__':
         "/conveyor/ip", "169.0.0.1")
     sockport = rospy.get_param(
         "/conveyor/sockport", 50007)
-    rospy.loginfo(str(ip))
-    rospy.loginfo(str(sockport))
     node = ConveyorNode(ip, sockport)
     rospy.spin()
