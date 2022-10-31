@@ -8,6 +8,7 @@ ROS driver for conveyor belt.
 ## Dependency
 
 - ROS Kinetic/Melodic/Noetic
+- [takuya-ki/conveyor_modbus](https://github.com/takuya-ki/conveyor_modbus)
 
 ## Installation
 
