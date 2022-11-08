@@ -12,9 +12,11 @@ ROS driver for conveyor belt.
 
 ## Installation
 
-    $ cd catkin_ws/src
-    $ git clone https://github.com/takuya-ki/conveyor_ros_driver.git --depth 1
-    $ cd ..; catkin build
+```bash
+$ cd catkin_ws/src  
+$ git clone https://github.com/takuya-ki/conveyor_ros_driver.git --depth 1  
+$ cd ..; catkin build  
+```
 
 ## Usage
 
@@ -27,9 +29,11 @@ $ python src/commands.py --command_from external --ip 169.0.0.1
 
 2. Start a command server on an Ubuntu computer
 
-    $ roscore  
-    $ rosrun conveyor conveyor_driver.py _/conveyor/ip:=169.0.0.1  
-    $ rosservice call /conveyor/set_command "<refer to below>"  
+```bash
+$ roscore  
+$ rosrun conveyor conveyor_driver.py _/conveyor/ip:=169.0.0.1  
+$ rosservice call /conveyor/set_command "<refer to below>"  
+```
 
 ##### Available commands  
 - nl: normal rotation with low speed  
