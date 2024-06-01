@@ -17,10 +17,7 @@ ROS driver for [Belcon Mini III series DMH](https://www.okurayusoki.co.jp/eng/pr
 ## Installation
 
 ```bash
-cd catkin_ws/src  
-git clone https://github.com/takuya-ki/conveyor_ros_driver.git --depth 1
-sudo apt install byobu
-cd ..; catkin build  
+cd catkin_ws/src && git clone https://github.com/takuya-ki/conveyor_ros_driver.git --depth 1 && sudo apt install byobu && cd .. && catkin build  
 ```
 
 ## Usage
@@ -35,8 +32,12 @@ python src/commands.py --command_from external --ip 169.0.0.1
 2. Start a command server on the Ubuntu computer
 
 ```bash
-roscore  
-rosrun conveyor conveyor_driver.py _/conveyor/ip:=169.0.0.1  
+roscore
+```
+```bash
+rosrun conveyor conveyor_driver.py _/conveyor/ip:=169.0.0.1
+```
+```bash
 rosservice call /conveyor/set_command "<refer to below>"  
 ```
 
